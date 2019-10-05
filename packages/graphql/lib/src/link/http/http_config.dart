@@ -38,6 +38,6 @@ class HttpHeadersAndBody {
     this.body,
   });
 
-  final Map<String, String> headers;
+  final Map<String, dynamic> headers;
   final Map<String, dynamic> body;
 }

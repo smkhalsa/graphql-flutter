@@ -61,7 +61,7 @@ class HttpLink extends Link {
                 ),
                 options: context['fetchOptions'] as Map<String, dynamic>,
                 credentials: context['credentials'] as Map<String, dynamic>,
-                headers: context['headers'] as Map<String, String>,
+                headers: context['headers'] as Map<String, dynamic>,
               );
             }
 
