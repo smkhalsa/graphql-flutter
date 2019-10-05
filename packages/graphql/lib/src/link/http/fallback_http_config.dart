@@ -9,7 +9,7 @@ Map<String, dynamic> defaultOptions = <String, dynamic>{
   'method': 'POST',
 };
 
-Map<String, String> defaultHeaders = <String, String>{
+Map<String, dynamic> defaultHeaders = <String, dynamic>{
   'accept': '*/*',
   'content-type': 'application/json',
 };

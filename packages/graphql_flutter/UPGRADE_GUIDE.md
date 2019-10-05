@@ -15,7 +15,7 @@ We changed the way the client handles requests, it now uses a `Link` to execute 
 void main() {
 +  HttpLink link = HttpLink(
 +    uri: 'https://api.github.com/graphql',
-+    headers: <String, String>{
++    headers: <String, dynamic>{
 +      'Authorization': 'Bearer <YOUR_PERSONAL_ACCESS_TOKEN>',
 +    },
 +  );
@@ -103,4 +103,3 @@ Mutation(
 ```
 
 That's it! You should now be able to use the latest version of our library.
-

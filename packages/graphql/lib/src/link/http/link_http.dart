@@ -22,7 +22,7 @@ class HttpLink extends Link {
 
     /// pass on customized httpClient, especially handy for mocking and testing
     Client httpClient,
-    Map<String, String> headers,
+    Map<String, dynamic> headers,
     Map<String, dynamic> credentials,
     Map<String, dynamic> fetchOptions,
   }) : super(
@@ -73,7 +73,7 @@ class HttpLink extends Link {
               contextConfig,
             );
 
-            final Map<String, String> httpHeaders = httpHeadersAndBody.headers;
+            final Map<String, dynamic> httpHeaders = httpHeadersAndBody.headers;
 
             StreamController<FetchResult> controller;
 
@@ -155,7 +155,7 @@ Future<Map<String, MultipartFile>> _getFileMap(
 Future<BaseRequest> _prepareRequest(
   String url,
   Map<String, dynamic> body,
-  Map<String, String> httpHeaders,
+  Map<String, dynamic> httpHeaders,
 ) async {
   final Map<String, MultipartFile> fileMap = await _getFileMap(body);
   if (fileMap.isEmpty) {
@@ -215,7 +215,7 @@ HttpHeadersAndBody _selectHttpOptionsAndBody(
   HttpConfig contextConfig,
 ]) {
   final Map<String, dynamic> options = <String, dynamic>{
-    'headers': <String, String>{},
+    'headers': <String, dynamic>{},
     'credentials': <String, dynamic>{},
   };
   final HttpQueryOptions http = HttpQueryOptions();
@@ -296,7 +296,7 @@ HttpHeadersAndBody _selectHttpOptionsAndBody(
   }
 
   return HttpHeadersAndBody(
-    headers: options['headers'] as Map<String, String>,
+    headers: options['headers'] as Map<String, dynamic>,
     body: body,
   );
 }
