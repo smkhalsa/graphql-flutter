@@ -10,7 +10,10 @@ authors:
 homepage: https://github.com/zino-app/graphql-flutter/tree/master/packages/graphql_flutter
 dependencies:
   graphql:
-    path: ../graphql
+    git:
+      url: git://github.com/smkhalsa/graphql-flutter.git
+      path: packages/graphql
+      ref: context_link
   flutter:
     sdk: flutter
   meta: ^1.1.6
